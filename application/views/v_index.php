@@ -5,7 +5,7 @@
         itu MVC? kita juga harus mengetahui apa itu MVC sebelum masuk dan lebih jauh dalam belajar Codeignater.
     </p>
     <p>MVC adalah teknik atau konsep yang memisahkan kompunen utama menjadi tiga komponen yaitu model,view,dan controller</p>
-        <ol type="a">
+    <ol type="a">
         <li>Model</li>
 <p align="justify">>Model adalah kelas yang merepresentasikan atau
 memodelkan tipe data yang akan digunakan oleh aplikasi. Model juga

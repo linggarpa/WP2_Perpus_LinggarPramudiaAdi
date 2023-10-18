@@ -62,3 +62,21 @@ footer a{
 section{
     padding: 20px;
 }
+.profile{
+    text-align: center;
+}
+.personal{
+    text-align: center;
+}
+.personal td{
+    font-size: medium;
+    font-weight: bold;
+}
+.findme{
+    text-align: center;
+}
+.findme a{
+    color: black;
+    text-decoration: none;
+}
+
