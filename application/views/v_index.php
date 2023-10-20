@@ -26,7 +26,7 @@ dalam folder application\models</p>
 interface atau halaman yang muncul pada user(pada browser). Tampilan
 dari user interface di kumpulkan pada view untuk memisahkannya
 dengan controller dan model sehingga memudahkan web designer dalam
-melakukan pengembangan tampilan halaman website.</p>
+melakukan pengembangan tampilan halaman website.<</p>
 <li>Controller</li>
 <p align="justify">Controller merupakan kumpulan intruksi aksi yang
 menghubungkan model dan view, jadi user tidak akan berhubungan
