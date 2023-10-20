@@ -1,6 +1,9 @@
 <section>
-    <h1><?php echo $judul ?></h1>
-    <center><img class="pict" src="https://histla.com/wp-content/uploads/2015/02/Codeigniter.png" alt="codeignater"></center>
+    <h1><i class="fas fa-home fa-sm"></i><?php echo $judul ?></h1>    
+    <br>
+    <h1 style="font-size: 25pt"><strong>PENGERTIAN MVC</strong></h1>
+    <h5 style="margin-top: -10px; color: grey">Karina - 20/10/2023, 13:00 WIB</h5>
+    <center><img class="pict" src="https://1.bp.blogspot.com/-bsoPXDXzm3c/TzaFJjDsi5I/AAAAAAAAANI/gYNBTesbs3I/s400/mvc1.png" alt="codeignater"></center>
     <p align="justify">Pada pengertian codeignater diatas tadi dijelaskan nahwa codeignater menggunakan metode MVC. Apa 
         itu MVC? kita juga harus mengetahui apa itu MVC sebelum masuk dan lebih jauh dalam belajar Codeignater.
     </p>
