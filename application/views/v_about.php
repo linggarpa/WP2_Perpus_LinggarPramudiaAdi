@@ -8,7 +8,7 @@
     <hr>
     <div class="personal">
         <h2>PERSONAL INFORMATION</h2>
-        <table border="0" width="75%" style="margin-left: 20%; margin-top: 3%">
+        <table border="0" width="75%" style="margin-left: 30%; margin-bottom: 2%; margin-top: 3%; text-align: left">
             <tbody>
                 <tr>
                     <td>Tanggal Lahir</td>
@@ -24,6 +24,11 @@
                     <td>Nomor Telepon</td>
                     <td>:</td>
                     <td>081318577258</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td>linggarpramudia24@gmail.com</td>
                 </tr>
                 <tr>
                     <td>Hobi</td>
