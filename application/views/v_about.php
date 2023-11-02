@@ -1,7 +1,7 @@
 <section>
     <h1><?php echo $judul ?></h1>
     <div class="profile">
-        <img id="profile" src="<?php echo base_url()?>assets/img/profile.jpeg" width="200" height="200" style="border-radius: 50%;" alt="foto pribadi">
+        <img id="profile" src="<?php echo base_url() ?>assets/img/profile.jpeg" width="200" height="200" style="border-radius: 50%;" alt="foto pribadi">
         <h1><b>Linggar Pramudia Adi</b></h1>
         <h4 style="margin-top: -10px;">(19220504)</h4>
     </div>
@@ -42,9 +42,8 @@
     <div class="findme">
         <h2>FIND ME</h2>
         <a href="https://www.instagram.com/lingg._.24/" class="fab fa-instagram fa-3x" style=" margin-right: 10px"></a>
-        <a href="#" class="fab fa-facebook fa-3x" style="margin-right: 10px" ></a>
+        <a href="#" class="fab fa-facebook fa-3x" style="margin-right: 10px"></a>
         <a href="https://twitter.com/lingling_24" class="fab fa-twitter fa-3x" style="margin-right: 10px"></a>
-        <a href=" https://github.com/linggarpa" class="fab fa-github fa-3x" ></a>
-       
+        <a href=" https://github.com/linggarpa" class="fab fa-github fa-3x"></a>
     </div>
 </section>
