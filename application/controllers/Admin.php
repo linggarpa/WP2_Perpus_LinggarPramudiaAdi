@@ -11,6 +11,7 @@ class Admin extends CI_Controller
     {
         $data['judul'] = 'Dashboard';
         $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
+        $this->db->where('role_id', 2);
         $data['anggota'] = $this->ModelUser->getUserLimit()->result_array();
         $data['buku'] = $this->ModelBuku->getBuku()->result_array();
         $this->load->view('admin/header', $data);

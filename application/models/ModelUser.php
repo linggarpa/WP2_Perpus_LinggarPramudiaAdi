@@ -7,10 +7,18 @@ class ModelUser extends CI_Model
     { 
         $this->db->insert('user', $data); 
     } 
-    public function cekData($where = null) 
-    { 
-        return $this->db->get_where('user', $where); 
-    } 
+    public function cekData($where = null)
+    {
+        return $this->db->get_where('user', $where);
+    }
+    public function hapusUser($where = null)
+    {
+        $this->db->delete('User', $where);
+    }
+    public function updateAnggota($data = null, $where = null)
+    {
+        $this->db->update('user', $data, $where);
+    }
     public function getUserWhere($where = null) 
     { 
         return $this->db->get_where('user', $where); 

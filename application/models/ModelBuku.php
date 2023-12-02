@@ -42,15 +42,15 @@ class ModelBuku extends CI_Model
     { 
         return $this->db->get_where('kategori', $where); 
     }
-    public function simpanKategori($data = null) 
-    { 
+    public function simpanKategori($data = null)
+    {
         $this->db->insert('kategori', $data); 
     } 
     public function hapusKategori($where = null) 
     { 
         $this->db->delete('kategori', $where); 
-    } 
-    public function updateKategori($where = null, $data = null) 
+    }
+    public function updateKategori($data = null, $where = null) 
     { 
         $this->db->update('kategori', $data, $where);
     }
