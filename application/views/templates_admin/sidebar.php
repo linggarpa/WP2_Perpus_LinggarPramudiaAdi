@@ -3,8 +3,8 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+        <div class="sidebar-brand-icon">
+            <i class="fas fa-car"></i>
         </div>
         <div class="sidebar-brand-text mx-3">Admin Moral</div>
     </a>
@@ -24,7 +24,7 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="<?= base_url('admin/datacustomer') ?>">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Customer</span></a>
     </li>
@@ -52,7 +52,7 @@
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/penyewaan') ?>">
+        <a class="nav-link" href="<?= base_url('admin/Datasewa') ?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Penyewaan</span></a>
     </li>
@@ -60,15 +60,16 @@
     <hr class="sidebar-divider">
 
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="<?= base_url('admin/Datatransaksi/konfirmasi') ?>">
             <i class="fas fa-fw fa-table"></i>
-            <span>Transaksi</span></a>
+            <span>Konfirmasi Transaksi</span></a>
     </li>
+
 
     <hr class="sidebar-divider">
 
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="<?= base_url('admin/Datapengembalian')?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Pengembalian</span></a>
     </li>

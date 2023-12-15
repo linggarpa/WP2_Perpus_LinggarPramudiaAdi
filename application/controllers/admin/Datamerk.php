@@ -2,13 +2,21 @@
 
 class Datamerk extends CI_Controller
 {
-
+    public function __construct()
+    {
+        parent::__construct();
+        cek_login();
+    }
+    
     public function index()
     {
+        $data['user_session'] = $this->Rental_model->cekData(['email' => 
+        $this->session->userdata('email')])->row_array();
+        $data['title'] = "Data Merk";
         $data['merk'] = $this->Rental_model->get_data('merk')->result();
-        $this->load->view('templates_admin/header');
+        $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar');
-        $this->load->view('templates_admin/topbar');
+        $this->load->view('templates_admin/topbar', $data);
         $this->load->view('admin/merk', $data);
         $this->load->view('templates_admin/footer');
     }

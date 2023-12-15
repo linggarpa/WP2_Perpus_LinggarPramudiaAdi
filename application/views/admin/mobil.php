@@ -8,7 +8,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <a href="<?= base_url('admin/Datamobil/tambah_mobil') ?>" class="btn btn-primary"><i class="fas fa-plus"></i> | Mobil Baru</a>
+                            <a href="<?= base_url('admin/Datamobil/tambah_mobil') ?>" class="btn btn-primary"><i class="fas fa-plus"></i> | Tambah Mobil</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">

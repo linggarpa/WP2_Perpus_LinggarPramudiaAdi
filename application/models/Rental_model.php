@@ -17,9 +17,18 @@ class Rental_model extends CI_Model
         $this->db->update($table, $data, $where);
     }
 
+    public function get_where($where,$table)
+    {
+        return $this->db->get_where($table,$where);
+    }
+        
     public function delete_data($where, $table)
     {
         $this->db->where($where);
         $this->db->delete($table);
+    }
+    public function cekData($where = null)
+    {
+        return $this->db->get_where('user', $where);
     }
 }

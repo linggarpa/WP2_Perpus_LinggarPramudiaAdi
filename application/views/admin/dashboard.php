@@ -10,11 +10,15 @@
                                 Customer
                             </div>
                             <div class="h1 mb-0 font-weight-bold text-white">
-                                4 </div>
+                                <?php $where = 'id_role = 2';
+                                 $totaluser = $this->Rental_model->get_where($where,'user')->num_rows();
+                                 echo $totaluser;
+                                 ?>
+                            </div>
                         </div>
                         <div class="col-auto">
-                            <a href="http://localhost/pustaka-booking/user/anggota">
-                                <i class="fas fa-users fa-3x text-warning"></i>
+                            <a href="<?= base_url('admin/Datacustomer')?>">
+                                <i class="fas fa-users fa-3x text-light"></i>
                             </a>
                         </div>
                     </div>
@@ -30,11 +34,12 @@
                                 Mobil
                             </div>
                             <div class="h1 mb-0 font-weight-bold text-white">
-                                50 </div>
+                            <?= $this->Rental_model->get_data('mobil')->num_rows();?>
+                            </div>
                         </div>
                         <div class="col-auto">
-                            <a href="http://localhost/pustaka-booking/buku">
-                                <i class="fas fa-book fa-3x text-primary"></i>
+                            <a href="<?= base_url('admin/Datamobil')?>">
+                                <i class="fas fa-car fa-3x text-light"></i>
                             </a>
                         </div>
                     </div>
@@ -50,11 +55,16 @@
                                 Penyewaan
                             </div>
                             <div class="h1 mb-0 font-weight-bold text-white">
-                                5 </div>
+                            <?php 
+                                $where = ['konfirmasi_pembayaran = Sudah Dikonfirmasi'] ;
+                                 $totalsewa = $this->Rental_model->get_where($where,'transaksi')->num_rows();
+                                 echo $totalsewa;
+                            ?>
+                            </div>
                         </div>
                         <div class="col-auto">
-                            <a href="http://localhost/pustaka-booking/user">
-                                <i class="fas fa-user-tag fa-3x text-success"></i>
+                            <a href="<?= base_url('admin/Datasewa')?>">
+                                <i class="fas fa-cart-plus fa-3x text-light"></i>
                             </a>
                         </div>
                     </div>
@@ -70,11 +80,12 @@
                                 Pengembalian
                             </div>
                             <div class="h1 mb-0 font-weight-bold text-white">
-                                3 </div>
+                            <?= $this->Rental_model->get_data('pengembalian')->num_rows();?>
+                            </div>
                         </div>
                         <div class="col-auto">
-                            <a href="http://localhost/pustaka-booking/user">
-                                <i class="fas fa-shopping-cart fa-3x text-danger"></i>
+                            <a href="<?= base_url('admin/Datapengembalian')?>">
+                                <i class="fas fa-undo-alt fa-3x text-light"></i>
                             </a>
                         </div>
                     </div>
@@ -96,55 +107,29 @@
             <table class="table mt-3 ml-2 mr-2">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Nama Anggota</th>
-                        <th>Email</th>
-                        <th>Role ID</th>
-                        <th>Aktif</th>
-                        <th>Member Sejak</th>
+                        <th>Nomor</th>
+                        <th>Nomor Transaksi</th>
+                        <th>Bank</th>
+                        <th>Total Bayar</th>
+                        <th>Bukti Bayar</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
+                <?php
+                    $no = 1;
+                    foreach ($konfirmasi as $confirm) : ?>
                     <tr>
-                        <td>1</td>
-                        <td>admin</td>
-                        <td>admin@gmail.com</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>2023</td>
+                        <td><?= $no++ ?></td>
+                        <td><?= "3271023".$confirm->id_transaksi  ?></td>
+                        <td><?= $confirm->bank?></td>
+                        <td><?= rupiah($confirm->tarif*$confirm->lama_sewa)?></td>
+                        <td> <a href="<?= base_url('assets/img/').$confirm->bukti_byr?>" target="$_blank"> lihat file </a></td>
+                        <td>
+                            <a href="<?= base_url('admin/Datatransaksi/konfirmasiTransaksi/') . $confirm->id_transaksi ?>" onclick="return confirm('Kamu yakin akan mengkonfirmasi pembayaran ini  3271023<?=  $confirm->id_transaksi ?> ?' );" class="btn btn-sm btn-primary"><i class="fas fa-check fa-sm mr-2"></i>Konfirmasi</a>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>linggar</td>
-                        <td>linggar@gmail.com</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>2023</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>audi</td>
-                        <td>audi@gmail.com</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>2023</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>galang</td>
-                        <td>galang@gmail.com</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>2023</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>zaldi</td>
-                        <td>zaldi@gmail.com</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>2023</td>
-                    </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

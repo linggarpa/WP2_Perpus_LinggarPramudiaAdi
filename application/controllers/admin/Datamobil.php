@@ -2,9 +2,17 @@
 
 class Datamobil extends CI_Controller
 {
-
+    public function __construct()
+    {
+        parent::__construct();
+        cek_login();
+    }
+    
     public function index()
     {
+        $data['user_session'] = $this->Rental_model->cekData(['email' => 
+        $this->session->userdata('email')])->row_array();
+        $data['title'] = "Data Mobil";
         $data['mobil'] = $this->db->query(
             "SELECT    mobil.id_mobil,
                                                 mobil.nama_mobil,
@@ -22,20 +30,23 @@ class Datamobil extends CI_Controller
         )->result();
         $data['jenis'] = $this->Rental_model->get_data('jenis')->result();
         $data['merk'] = $this->Rental_model->get_data('merk')->result();
-        $this->load->view('templates_admin/header');
+        $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar');
-        $this->load->view('templates_admin/topbar');
+        $this->load->view('templates_admin/topbar', $data);
         $this->load->view('admin/mobil', $data);
         $this->load->view('templates_admin/footer');
     }
 
     public function tambah_mobil()
     {
+        $data['user_session'] = $this->Rental_model->cekData(['email' => 
+        $this->session->userdata('email')])->row_array();
+        $data['title'] = "Tambah Mobil";
         $data['jenis'] = $this->Rental_model->get_data('jenis')->result();
         $data['merk'] = $this->Rental_model->get_data('merk')->result();
-        $this->load->view('templates_admin/header');
+        $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar');
-        $this->load->view('templates_admin/topbar');
+        $this->load->view('templates_admin/topbar', $data);
         $this->load->view('admin/tambah_mobil', $data);
         $this->load->view('templates_admin/footer');
     }
@@ -99,6 +110,9 @@ class Datamobil extends CI_Controller
 
     public function update_mobil($id)
     {
+        $data['user_session'] = $this->Rental_model->cekData(['email' => 
+        $this->session->userdata('email')])->row_array();
+        $data['title'] = "Edit Data Mobil";
         $where = array('id_mobil' => $id);
         $data['mobil'] = $this->db->query(
             "SELECT * FROM mobil, jenis, merk
@@ -110,9 +124,9 @@ class Datamobil extends CI_Controller
         $data['jenis'] = $this->Rental_model->get_data('jenis')->result();
         $data['merk'] = $this->Rental_model->get_data('merk')->result();
 
-        $this->load->view('templates_admin/header');
+        $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar');
-        $this->load->view('templates_admin/topbar');
+        $this->load->view('templates_admin/topbar', $data);
         $this->load->view('admin/edit_mobil', $data);
         $this->load->view('templates_admin/footer');
     }

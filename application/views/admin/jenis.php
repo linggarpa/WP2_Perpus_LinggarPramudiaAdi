@@ -8,7 +8,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <a href="" data-toggle="modal" data-target="#jenisBaruModal" class="btn btn-primary"><i class="fas fa-plus"></i> | Jenis Baru</a>
+                            <a href="" data-toggle="modal" data-target="#jenisBaruModal" class="btn btn-primary"><i class="fas fa-plus"></i> | Tambah Jenis</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
